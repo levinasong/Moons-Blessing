@@ -45,6 +45,9 @@
     // Random number 1–TOTAL_CARDS
     const n = Math.floor(Math.random() * TOTAL_CARDS) + 1;
 
+    // Format into 2 digits → 01, 02, ... 16
+    const padded = String(n).padStart(2, "0");
+
     // Folder URL (space = %20)
     const baseUrl = "https://levinasong.github.io/Moons-Blessing/mobile%20cards";
 

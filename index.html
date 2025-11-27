@@ -48,12 +48,8 @@
     // Format into 2 digits → 01, 02, ... 16
     const padded = String(n).padStart(2, "0");
 
-    // Folder URL (space = %20)
-    const baseUrl = "https://levinasong.github.io/Moons-Blessing/mobile%20cards";
-
-    // Filenames: mobile-cards-n.png
     const img = document.getElementById("card");
-    img.src = `${baseUrl}/mobile-cards-${n}.png?ts=${Date.now()}`;
+    img.src = `mobile cards/mobile-cards-${padded}.png?ts=${Date.now()}`;
   </script>
 </body>
 </html>

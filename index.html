@@ -39,16 +39,18 @@
   </div>
 
   <script>
-    // 1) total number of cards
-    const TOTAL_CARDS = 16; // change to 28 if you upgrade later
+    // Total number of cards
+    const TOTAL_CARDS = 16; // change to 28 later if needed
 
-    // 2) pick a random number (1–TOTAL_CARDS)
+    // Random number 1–TOTAL_CARDS
     const n = Math.floor(Math.random() * TOTAL_CARDS) + 1;
 
-    // 3) location of your PNG files on GitHub Pages
-    const baseUrl = "https://levinasong.github.io/Moons-Blessing/mobile-cards";
+    // Folder URL (space = %20)
+    const baseUrl = "https://levinasong.github.io/Moons-Blessing/mobile%20cards";
 
-    // 4) show the random card
+    // Filenames: mobile-cards-n.png
     const img = document.getElementById("card");
-    img.src = `${baseUrl}/mobile-cards-${n}.png?ts=${Dat
-
+    img.src = `${baseUrl}/mobile-cards-${n}.png?ts=${Date.now()}`;
+  </script>
+</body>
+</html>

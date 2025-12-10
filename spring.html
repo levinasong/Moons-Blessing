@@ -3,45 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moonlight Blessings – Flavor</title>
+  <title>Moonlight's Blessings – Spring</title>
+
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: #ffffff;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI";
     }
 
-    #card-container {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    /* container that holds image + button on top */
+    .screen {
+      position: relative;
       width: 100%;
-      padding: 16px;
+      height: 100%;
     }
 
+    /* make image fill whole phone screen */
     #card {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      display: block;
-    }
-
-    #button-container {
+      position: absolute;
       width: 100%;
-      padding: 16px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      height: 100%;
+      object-fit: cover;  /* fills screen beautifully */
     }
 
-    button {
+    /* button on top of the image */
+    #revealButton {
+      position: absolute;
+      bottom: 8%;               /* adjust this to move button up/down */
+      left: 50%;
+      transform: translateX(-50%);
       padding: 14px 32px;
       border-radius: 999px;
       border: none;
@@ -54,24 +52,24 @@
       transition: 0.15s ease;
     }
 
-    button:active {
-      transform: translateY(1px);
+    #revealButton:active {
+      transform: translate(-50%, 1px);
     }
   </style>
 </head>
 <body>
 
-  <div id="card-container">
+  <div class="screen">
     <img id="card" src="flavor-cards/flavor cards-01.png" alt="flavor card" />
-  </div>
 
-  <div id="button-container">
-    <button id="revealButton">tap to reveal fortune</button>
+    <button id="revealButton">
+      tap to reveal fortune
+    </button>
   </div>
 
   <script>
     document.getElementById("revealButton").addEventListener("click", () => {
-      window.location.href = "index.html"; 
+      window.location.href = "index.html";
     });
   </script>
 

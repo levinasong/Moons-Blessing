@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moonlight's Blessings – Fall</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI";
+    }
+
+    /* container that holds image + button on top */
+    .screen {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* make image fill whole phone screen */
+    #card {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;  /* fills screen beautifully */
+    }
+
+    /* button on top of the image */
+    #revealButton {
+      position: absolute;
+      bottom: 8%;               /* adjust this to move button up/down */
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 14px 32px;
+      border-radius: 999px;
+      border: none;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      background-color: #cfa84a;
+      color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: 0.15s ease;
+    }
+
+    #revealButton:active {
+      transform: translate(-50%, 1px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="screen">
+    <img id="card" src="flavor cards/flavor-cards-03.png" alt="flavor card" />
+
+    <button id="revealButton">
+      tap to reveal fortune
+    </button>
+  </div>
+
+  <script>
+    document.getElementById("revealButton").addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+  </script>
+
+</body>
+</html>
